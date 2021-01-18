@@ -1,18 +1,13 @@
-{
-    "plugins": [
-        "@semantic-release/github",
-        "@semantic-release/release-notes-generator", 
-        "@semantic-release/commit-analyzer",
-        ["@semantic-release/changelog", {
-            "changelogFile": "Assets/Discovery/CHANGELOG.md",
-        }],
-        ["@semantic-release/npm", {
-            "npmPublish": false,
-            "pkgRoot": "Assets/Discovery"
-        }],
-        ["@semantic-release/git", {
-            "assets": ["Assets/Discovery/package.json", "Assets/Discovery/CHANGELOG.md"],
-            "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-        }],
-    ]
-}
+plugins:
+  - '@semantic-release/github'
+  - '@semantic-release/release-notes-generator'
+  - '@semantic-release/commit-analyzer'
+  - - '@semantic-release/changelog'
+    - changelogFile: 'Assets/Discovery/CHANGELOG.md'
+  - - '@semantic-release/npm'
+    - npmPublish: false
+      pkgRoot: 'Assets/Discovery'   
+  - - '@semantic-release/git'
+    - assets: 
+      - 'Assets/Discovery/package.json'
+      - 'Assets/Discovery/CHANGELOG.md'
