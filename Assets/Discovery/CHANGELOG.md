@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/MirrorNG/Discovery/compare/v2.0.0...v2.0.1) (2021-02-15)
+
+
+### Bug Fixes
+
+* generate reader/writer for default discovery ([e484e26](https://github.com/MirrorNG/Discovery/commit/e484e2649c0b4a367fea1acf2616140035b9beff))
+
 # [2.0.0](https://github.com/MirrorNG/Discovery/compare/v1.0.0...v2.0.0) (2021-02-15)
 
 
