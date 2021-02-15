@@ -3,6 +3,7 @@ using System.Net;
 
 namespace Mirror.Discovery
 {
+    [NetworkMessage]
     public struct ServerResponse
     {
         // The server that sent this
