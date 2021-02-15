@@ -58,7 +58,7 @@ namespace Mirror.Discovery
             if (GUILayout.Button("Start Host"))
             {
                 discoveredServers.Clear();
-                networkManager.Server.StartHost(networkManager.client).Forget();
+                networkManager.Server.StartHost(networkManager.Client).Forget();
                 networkDiscovery.AdvertiseServer();
             }
 
@@ -89,7 +89,7 @@ namespace Mirror.Discovery
 
         void Connect(ServerResponse info)
         {
-            networkManager.client.ConnectAsync(info.uri.First()).Forget();
+            networkManager.Client.ConnectAsync(info.uri.First()).Forget();
         }
 
         public void OnDiscoveredServer(ServerResponse info)
