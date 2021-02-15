@@ -1,3 +1,16 @@
+# [2.0.0](https://github.com/MirrorNG/Discovery/compare/v1.0.0...v2.0.0) (2021-02-15)
+
+
+### Bug Fixes
+
+* update changes that ng made. ([b52745b](https://github.com/MirrorNG/Discovery/commit/b52745b403d6cd71654806a8d52e7e97bb54d8be))
+* update dependencies ([32f60e8](https://github.com/MirrorNG/Discovery/commit/32f60e8717e22c1700098ade891c8481851aa02f))
+
+
+### BREAKING CHANGES
+
+* upgrade to MirrorNG 65.x
+
 # 1.0.0 (2020-12-31)
 
 
