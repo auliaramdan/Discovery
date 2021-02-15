@@ -37,10 +37,10 @@ namespace Mirror.Discovery
 
         void OnGUI()
         {
-            if (networkManager.server.Active || networkManager.client.Active)
+            if (networkManager.Server.Active || networkManager.Client.Active)
                 return;
 
-            if (!networkManager.client.IsConnected && !networkManager.server.Active && !networkManager.client.Active)
+            if (!networkManager.Client.IsConnected && !networkManager.Server.Active && !networkManager.Client.Active)
                 DrawGUI();
         }
 
@@ -58,7 +58,7 @@ namespace Mirror.Discovery
             if (GUILayout.Button("Start Host"))
             {
                 discoveredServers.Clear();
-                networkManager.server.StartHost(networkManager.client).Forget();
+                networkManager.Server.StartHost(networkManager.client).Forget();
                 networkDiscovery.AdvertiseServer();
             }
 
@@ -66,7 +66,7 @@ namespace Mirror.Discovery
             if (GUILayout.Button("Start Server"))
             {
                 discoveredServers.Clear();
-                networkManager.server.ListenAsync().Forget();
+                networkManager.Server.ListenAsync().Forget();
 
                 networkDiscovery.AdvertiseServer();
             }
