@@ -3,7 +3,7 @@ using System.Linq;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Mirror.Discovery
+namespace Mirage.Discovery
 {
     [DisallowMultipleComponent]
     [AddComponentMenu("Network/NetworkDiscoveryHud")]

@@ -1,4 +1,4 @@
-namespace Mirror.Discovery
+namespace Mirage.Discovery
 {
     [NetworkMessage]
     public struct ServerRequest { }
