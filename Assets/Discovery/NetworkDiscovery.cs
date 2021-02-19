@@ -4,7 +4,7 @@ using System.Net;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Mirror.Discovery
+namespace Mirage.Discovery
 {
     [Serializable]
     public class ServerFoundUnityEvent : UnityEvent<ServerResponse> { };

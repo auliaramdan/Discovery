@@ -1,16 +1,16 @@
 {
-    "name": "com.mirrorng.discovery",
-    "displayName": "MirrorNG Discovery",
+    "name": "com.miragenet.discovery",
+    "displayName": "Mirage Discovery",
     "version": "2.0.1",
     "unity": "2019.1",
-    "description": "A plugin for MirrorNG to find other players in your local network",
+    "description": "A plugin for Mirage to find other players in your local network",
     "author": "Paul Pacheco",
     "repository": {
         "type": "git",
-        "url": "https://github.com/MirrorNG/Discovery.git"
+        "url": "https://github.com/MirageNet/Discovery.git"
     },
     "dependencies": {
-        "com.mirrorng.mirrorng": "65.0.0",
+        "com.miragenet.mirage": "66.2.0",
         "com.cysharp.unitask": "2.0.36"
     },
     "samples": [

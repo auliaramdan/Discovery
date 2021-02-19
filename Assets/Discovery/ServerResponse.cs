@@ -1,7 +1,7 @@
 using System;
 using System.Net;
 
-namespace Mirror.Discovery
+namespace Mirage.Discovery
 {
     [NetworkMessage]
     public struct ServerResponse

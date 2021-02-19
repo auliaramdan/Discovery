@@ -10,7 +10,7 @@ using UnityEngine.Rendering;
 // forked from https://github.com/in0finite/MirrorNetworkDiscovery
 // Both are MIT Licensed
 
-namespace Mirror.Discovery
+namespace Mirage.Discovery
 {
     /// <summary>
     /// Base implementation for Network Discovery.  Extend this component
@@ -326,7 +326,7 @@ namespace Mirror.Discovery
         /// Override if you wish to include additional data in the discovery message
         /// such as desired game mode, language, difficulty, etc... </remarks>
         /// <returns>An instance of ServerRequest with data to be broadcasted</returns>
-        protected abstract Request GetRequest() ;
+        protected abstract Request GetRequest();
 
         async Task ReceiveGameBroadcastAsync(UdpClient udpClient)
         {
