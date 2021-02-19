@@ -1,9 +1,9 @@
 ![Mirror Logo](https://i.imgur.com/ikP9eYs.png)
 
-[![Discord](https://img.shields.io/discord/343440455738064897.svg)](https://discordapp.com/invite/N9QVxbM)
-[![release](https://img.shields.io/github/release/MirrorNG/Discovery.svg)](https://github.com/MirrorNG/Discovery/releases/latest)
+[![Discord](https://img.shields.io/discord/343440455738064897.svg)]()
+[![release](https://img.shields.io/github/release/MirageNet/Discovery.svg)](https://github.com/MirageNet/Discovery/releases/latest)
 
-[![Build](https://github.com/MirrorNG/Discovery/workflows/CI/badge.svg)](https://github.com/MirrorNG/Discovery/actions?query=workflow%3ACI)
+[![Build](https://github.com/MirageNet/Discovery/workflows/CI/badge.svg)](https://github.com/MirageNet/Discovery/actions?query=workflow%3ACI)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=MirrorNG_Discovery&metric=alert_status)](https://sonarcloud.io/dashboard?id=MirrorNG_Discovery)
 [![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=MirrorNG_Discovery&metric=coverage)](https://sonarcloud.io/component_measures?id=MirrorNG_Discovery&metric=coverage)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=MirrorNG_Discovery&metric=ncloc)](https://sonarcloud.io/dashboard?id=MirrorNG_Discovery)
@@ -11,7 +11,7 @@
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=MirrorNG_Discovery&metric=code_smells)](https://sonarcloud.io/dashboard?id=MirrorNG_Discovery)
 
 
-MirrorNG Discovery is a plugin for MirrorNG to for games to automatically find each other within the same network
+Mirage Discovery is a plugin for Mirage to for games to automatically find each other within the same network
 
 ## Installation
 The preferred installation method is Unity Package manager.
@@ -19,13 +19,13 @@ The preferred installation method is Unity Package manager.
 If you are using unity 2019.3 or later: 
 
 1) Open your project in unity
-2) Install [MirrorNG](https://github.com/MirrorNG/MirrorNG)
+2) Install [Mirage](https://github.com/MirageNet/Mirage)
 3) Click on Windows -> Package Manager
 4) Click on the plus sign on the left and click on "Add package from git URL..."
-5) enter https://github.com/MirrorNG/Discovery.git?path=/Assets/Discovery
-6) Unity will download and install MirrorNG Discovery
+5) enter https://github.com/MirageNet/Discovery.git?path=/Assets/Discovery
+6) Unity will download and install Mirage Discovery
 
-Alternatively you can download it from [Download Mirror](https://github.com/MirrorNG/Discovery/releases).  You will need to install some dependencies yourself such as cecil.
+Alternatively you can download it from [Download Mirror](https://github.com/MirageNet/Discovery/releases).  You will need to install some dependencies yourself such as cecil.
 
 ## Usage
 
