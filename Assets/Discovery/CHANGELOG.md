@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/MirageNet/Discovery/compare/v2.0.1...v2.0.2) (2021-02-19)
+
+
+### Bug Fixes
+
+* readme ([ee4c447](https://github.com/MirageNet/Discovery/commit/ee4c44792e1b2c3ae65bcfeef63c0bf8c086e2d2))
+
 ## [2.0.1](https://github.com/MirrorNG/Discovery/compare/v2.0.0...v2.0.1) (2021-02-15)
 
 
