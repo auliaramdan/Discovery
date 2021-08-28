@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/MirageNet/Discovery/compare/v2.0.2...v2.0.3) (2021-08-28)
+
+
+### Bug Fixes
+
+* updated for newer version of mirage. Needs refactoring to use non gui related calls. ([40c2341](https://github.com/MirageNet/Discovery/commit/40c234176610100d0d9417c83032243f8ce68721))
+
 ## [2.0.2](https://github.com/MirageNet/Discovery/compare/v2.0.1...v2.0.2) (2021-02-19)
 
 

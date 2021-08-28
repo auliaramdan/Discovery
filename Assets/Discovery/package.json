@@ -1,7 +1,7 @@
 {
     "name": "com.miragenet.discovery",
     "displayName": "Mirage Discovery",
-    "version": "2.0.2",
+    "version": "2.0.3",
     "unity": "2019.1",
     "description": "A plugin for Mirage to find other players in your local network",
     "author": "Paul Pacheco",
