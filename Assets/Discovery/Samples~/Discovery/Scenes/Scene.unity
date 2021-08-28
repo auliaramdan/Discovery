@@ -132,7 +132,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 62199028}
-  - component: {fileID: 62199027}
   m_Layer: 0
   m_Name: StartPos
   m_TagString: Untagged
@@ -140,18 +139,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &62199027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 62199026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41f84591ce72545258ea98cb7518d8b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &62199028
 Transform:
   m_ObjectHideFlags: 0
@@ -175,7 +162,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 441913362}
-  - component: {fileID: 441913361}
   m_Layer: 0
   m_Name: StartPos
   m_TagString: Untagged
@@ -183,18 +169,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &441913361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441913360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41f84591ce72545258ea98cb7518d8b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &441913362
 Transform:
   m_ObjectHideFlags: 0
@@ -218,7 +192,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 919124425}
-  - component: {fileID: 919124424}
   m_Layer: 0
   m_Name: StartPos
   m_TagString: Untagged
@@ -226,18 +199,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &919124424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919124423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41f84591ce72545258ea98cb7518d8b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &919124425
 Transform:
   m_ObjectHideFlags: 0
@@ -261,7 +222,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 970214388}
-  - component: {fileID: 970214387}
   m_Layer: 0
   m_Name: StartPos
   m_TagString: Untagged
@@ -269,18 +229,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &970214387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970214386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41f84591ce72545258ea98cb7518d8b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &970214388
 Transform:
   m_ObjectHideFlags: 0
@@ -388,14 +336,15 @@ GameObject:
   m_Component:
   - component: {fileID: 1556883247}
   - component: {fileID: 1556883245}
-  - component: {fileID: 1556883248}
   - component: {fileID: 1556883250}
   - component: {fileID: 1556883249}
   - component: {fileID: 1556883244}
   - component: {fileID: 1556883251}
-  - component: {fileID: 1556883252}
   - component: {fileID: 1556883253}
   - component: {fileID: 1556883246}
+  - component: {fileID: 1556883248}
+  - component: {fileID: 1556883252}
+  - component: {fileID: 1556883254}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -415,14 +364,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7aaac73a16c040fd871cb977b5c557b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  client: {fileID: 1556883249}
-  server: {fileID: 1556883250}
-  sceneManager: {fileID: 1556883251}
-  clientObjectManager: {fileID: 1556883253}
-  serverObjectManager: {fileID: 1556883246}
-  playerPrefab: {fileID: 1410032569926419539, guid: ecd52c53a6ef7496693343d3e32dace1, type: 3}
+  Client: {fileID: 1556883249}
+  Server: {fileID: 1556883250}
+  SceneManager: {fileID: 1556883251}
+  ClientObjectManager: {fileID: 1556883253}
+  ServerObjectManager: {fileID: 1556883246}
+  PlayerPrefab: {fileID: 1410032569926419539, guid: ecd52c53a6ef7496693343d3e32dace1, type: 3}
+  AutoSpawn: 1
   startPositionIndex: 0
-  startPositions: []
+  startPositions:
+  - {fileID: 62199028}
+  - {fileID: 441913362}
+  - {fileID: 1911023978}
+  - {fileID: 919124425}
+  - {fileID: 970214388}
+  - {fileID: 2054361116}
+  - {fileID: 1611696153}
+  - {fileID: 1958729890}
   playerSpawnMethod: 0
 --- !u!114 &1556883245
 MonoBehaviour:
@@ -436,11 +394,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aab4c8111b7c411b9b92cf3dbc5bd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  server: {fileID: 1556883250}
-  client: {fileID: 1556883249}
-  sceneManager: {fileID: 0}
-  serverObjectManager: {fileID: 0}
-  clientObjectManager: {fileID: 0}
+  Server: {fileID: 1556883250}
+  Client: {fileID: 1556883249}
+  NetworkSceneManager: {fileID: 1556883251}
+  ServerObjectManager: {fileID: 1556883246}
+  ClientObjectManager: {fileID: 1556883253}
 --- !u!114 &1556883246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,8 +411,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b750203ddb2d9f84abd799a5c2c32cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  server: {fileID: 1556883250}
-  networkSceneManager: {fileID: 1556883251}
+  Server: {fileID: 1556883250}
+  NetworkSceneManager: {fileID: 1556883251}
 --- !u!4 &1556883247
 Transform:
   m_ObjectHideFlags: 0
@@ -478,28 +436,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1556883243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c761308e733c51245b2e8bb4201f46dc, type: 3}
+  m_Script: {fileID: 11500000, guid: d9f46b2d67d7a054d8c13075473bd4a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secretHandshake: 1558261479176021378
-  serverBroadcastListenPort: 47777
-  ActiveDiscoveryInterval: 3
-  transport: {fileID: 1556883252}
-  OnServerFound:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnDiscoveredServer
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  Address: localhost
+  Port: 7777
+  SocketLib: 2
+  BufferSize: 262144
 --- !u!114 &1556883249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,17 +455,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abe6be14204d94224a3e7cd99dd2ea73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnablePeerMetrics: 0
+  SocketFactory: {fileID: 1556883248}
+  DisconnectOnException: 1
   authenticator: {fileID: 0}
-  Connected:
-    m_PersistentCalls:
-      m_Calls: []
-  Authenticated:
-    m_PersistentCalls:
-      m_Calls: []
-  Disconnected:
-    m_PersistentCalls:
-      m_Calls: []
-  Transport: {fileID: 0}
+  _started:
+    _event:
+      m_PersistentCalls:
+        m_Calls: []
+  _connected:
+    _event:
+      m_PersistentCalls:
+        m_Calls: []
+  _authenticated:
+    _event:
+      m_PersistentCalls:
+        m_Calls: []
+  _disconnected:
+    _event:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!114 &1556883250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,31 +487,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5f5ec068f5604c32b160bc49ee97b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnablePeerMetrics: 0
   MaxConnections: 4
-  Started:
-    m_PersistentCalls:
-      m_Calls: []
-  Connected:
-    m_PersistentCalls:
-      m_Calls: []
-  Authenticated:
-    m_PersistentCalls:
-      m_Calls: []
-  Disconnected:
-    m_PersistentCalls:
-      m_Calls: []
-  Stopped:
-    m_PersistentCalls:
-      m_Calls: []
-  OnStartHost:
-    m_PersistentCalls:
-      m_Calls: []
-  OnStopHost:
-    m_PersistentCalls:
-      m_Calls: []
-  authenticator: {fileID: 0}
+  DisconnectOnException: 1
   Listening: 1
-  transport: {fileID: 1556883252}
+  SocketFactory: {fileID: 1556883248}
+  authenticator: {fileID: 0}
+  _started:
+    _event:
+      m_PersistentCalls:
+        m_Calls: []
+  _connected:
+    m_PersistentCalls:
+      m_Calls: []
+  _authenticated:
+    m_PersistentCalls:
+      m_Calls: []
+  _disconnected:
+    m_PersistentCalls:
+      m_Calls: []
+  _stopped:
+    _event:
+      m_PersistentCalls:
+        m_Calls: []
+  _onStartHost:
+    _event:
+      m_PersistentCalls:
+        m_Calls: []
+  _onStopHost:
+    _event:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!114 &1556883251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,18 +530,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30967dfd80dbb6c46a270a64ebecb951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  client: {fileID: 1556883249}
-  server: {fileID: 1556883250}
-  ClientChangeScene:
+  Client: {fileID: 1556883249}
+  Server: {fileID: 1556883250}
+  DontDestroy: 1
+  _clientChangeScene:
     m_PersistentCalls:
       m_Calls: []
-  ClientSceneChanged:
+  _clientSceneChanged:
     m_PersistentCalls:
       m_Calls: []
-  ServerChangeScene:
+  _serverChangeScene:
     m_PersistentCalls:
       m_Calls: []
-  ServerSceneChanged:
+  _serverSceneChanged:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &1556883252
@@ -595,12 +554,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1556883243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3fbf0a5cb914b1c9bbb8a42e081f4bd, type: 3}
+  m_Script: {fileID: 11500000, guid: adb8e2103d9194c42a92e7230b6660b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Port: 7777
-  HashCashBits: 18
-  delayMode: 0
+  secretHandshake: -2281388675732436523
+  serverBroadcastListenPort: 47777
+  ActiveDiscoveryInterval: 3
+  transport: {fileID: 1556883248}
+  OnServerFound:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1556883253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,10 +576,169 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2cbc85c1c2f1c249bbe95ae110bbcde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  client: {fileID: 1556883249}
-  networkSceneManager: {fileID: 1556883251}
+  Client: {fileID: 1556883249}
+  NetworkSceneManager: {fileID: 1556883251}
   spawnPrefabs:
   - {fileID: 1410032569926419539, guid: ecd52c53a6ef7496693343d3e32dace1, type: 3}
+--- !u!114 &1556883254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556883243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6e8eccf4b6f4dc7b24c276ef47fde8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Levels:
+  - Name: CharacterSpawner
+    level: 2
+  - Name: ClientObjectManager
+    level: 2
+  - Name: ServerObjectManager
+    level: 2
+  - Name: NetworkClient
+    level: 2
+  - Name: NetworkTime
+    level: 2
+  - Name: NetworkDiscovery
+    level: 3
+  - Name: NetworkDiscoveryBase`2
+    level: 3
+  - Name: NetworkIdentity
+    level: 2
+  - Name: NetworkSceneManager
+    level: 2
+  - Name: NetworkServer
+    level: 2
+  - Name: RemoteCallHelper
+    level: 2
+  - Name: NetworkBehaviour
+    level: 2
+  - Name: OmnPlayerSpawner
+    level: 2
+  - Name: NetworkProximityChecker
+    level: 2
+  - Name: NetworkAnimator
+    level: 2
+  - Name: ZoneHandler
+    level: 2
+  - Name: NetworkBehaviourInspector
+    level: 2
+  - Name: BlackBoxLoginAuthenticator
+    level: 2
+  - Name: BlackBoxFactory
+    level: 2
+  - Name: NetworkSceneChecker
+    level: 2
+  - Name: Reward
+    level: 2
+  - Name: SteamyTransport
+    level: 2
+  - Name: OctreeInterestChecker
+    level: 2
+  - Name: PlayerSpawner
+    level: 2
+  - Name: EpicTransport
+    level: 2
+  - Name: ChatWindow
+    level: 2
+  - Name: HeadlessFrameLimiter
+    level: 2
+  - Name: AreaOfInterestManager
+    level: 2
+  - Name: BaseNetworkVisibility
+    level: 2
+  - Name: AdditiveNetworkManager
+    level: 2
+  - Name: FlexNetworkAnimator
+    level: 2
+  - Name: EnterPlayModeSettingsCheck
+    level: 2
+  - Name: NetworkScenePostProcess
+    level: 2
+  - Name: NetworkConnection
+    level: 2
+  - Name: NetworkWriterPool
+    level: 2
+  - Name: NetworkReaderExtensions
+    level: 2
+  - Name: NetworkReaderPool
+    level: 2
+  - Name: SceneDrawer
+    level: 2
+  - Name: NetworkRigidbody
+    level: 2
+  - Name: BasicAuthenticator
+    level: 2
+  - Name: Server
+    level: 2
+  - Name: Client
+    level: 2
+  - Name: SteamConnection
+    level: 2
+  - Name: SteamCommon
+    level: 2
+  - Name: SteamServer
+    level: 2
+  - Name: KcpConnection
+    level: 2
+  - Name: LogFactoryTests
+    level: 2
+  - Name: NetworkManager
+    level: 2
+  - Name: WeaverTests
+    level: 4
+  - Name: Tests
+    level: 4
+  - Name: WelcomeWindow
+    level: 2
+  - Name: Peer
+    level: 2
+  - Name: NetworkPlayer
+    level: 3
+  - Name: NetworkWorld
+    level: 2
+  - Name: SyncVarReceiver
+    level: 2
+  - Name: PipePeerConnection
+    level: 2
+  - Name: EchoChannelAndSettingsButton
+    level: 2
+  - Name: LoginManager
+    level: 2
+  - Name: NetworkPositionBehaviour
+    level: 0
+  - Name: UIManager
+    level: 2
+  - Name: PlayerVoiceBehaviour
+    level: 2
+  - Name: CapyCafeNetworkManager
+    level: 2
+  - Name: UIPanel_Chat
+    level: 2
+  - Name: FirebaseLoginManager
+    level: 2
+  - Name: SyncPositionBehaviour
+    level: 0
+  - Name: SnapshotBuffer
+    level: 0
+  - Name: InterpolationTime
+    level: 0
+  - Name: MessageBroker
+    level: 2
+  - Name: RosterUI
+    level: 2
+  - Name: MessageHandler
+    level: 2
+  - Name: MirageTypesExtensions
+    level: 2
+  - Name: BlackBoxSocket
+    level: 2
+  - Name: BlackBoxEncryption
+    level: 2
 --- !u!1 &1611696151
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,7 +748,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1611696153}
-  - component: {fileID: 1611696152}
   m_Layer: 0
   m_Name: StartPos
   m_TagString: Untagged
@@ -634,18 +755,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1611696152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611696151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41f84591ce72545258ea98cb7518d8b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1611696153
 Transform:
   m_ObjectHideFlags: 0
@@ -736,6 +845,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1730851148
@@ -761,7 +871,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1911023978}
-  - component: {fileID: 1911023977}
   m_Layer: 0
   m_Name: StartPos
   m_TagString: Untagged
@@ -769,18 +878,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1911023977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911023976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41f84591ce72545258ea98cb7518d8b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1911023978
 Transform:
   m_ObjectHideFlags: 0
@@ -804,7 +901,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1958729890}
-  - component: {fileID: 1958729889}
   m_Layer: 0
   m_Name: StartPos
   m_TagString: Untagged
@@ -812,18 +908,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1958729889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1958729888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41f84591ce72545258ea98cb7518d8b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1958729890
 Transform:
   m_ObjectHideFlags: 0
@@ -847,7 +931,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2054361116}
-  - component: {fileID: 2054361115}
   m_Layer: 0
   m_Name: StartPos
   m_TagString: Untagged
@@ -855,18 +938,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2054361115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2054361114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41f84591ce72545258ea98cb7518d8b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2054361116
 Transform:
   m_ObjectHideFlags: 0
@@ -932,6 +1003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -971,10 +1043,13 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
+  m_OnSubmit:
+    m_PersistentCalls:
+      m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7627036909765883685}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnNetworkAddressInputUpdate
         m_Mode: 1
@@ -993,6 +1068,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!224 &476531298768979161
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1105,6 +1181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1134,7 +1211,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7627036909765883685}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: StartHostButtonHandler
         m_Mode: 1
@@ -1237,6 +1314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1266,7 +1344,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7627036909765883685}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: StartServerOnlyButtonHandler
         m_Mode: 1
@@ -1605,7 +1683,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &476531299574466372
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1840,6 +1918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1869,7 +1948,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7627036909765883685}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: StartClientButtonHandler
         m_Mode: 1
@@ -2010,6 +2089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2039,7 +2119,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7627036909765883685}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: StopButtonHandler
         m_Mode: 1
@@ -2141,7 +2221,7 @@ GameObject:
   - component: {fileID: 476531300751975586}
   - component: {fileID: 476531300751975589}
   - component: {fileID: 476531300751975588}
-  - component: {fileID: 7627036909765883685}
+  - component: {fileID: 476531300751975587}
   m_Layer: 5
   m_Name: NetworkManagerHUD
   m_TagString: Untagged
@@ -2170,6 +2250,20 @@ RectTransform:
   m_AnchoredPosition: {x: 95, y: -80}
   m_SizeDelta: {x: 175, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &476531300751975587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476531300751975585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2c8cf28104f48f5b363d5848e2137f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  networkDiscovery: {fileID: 1556883252}
+  networkManager: {fileID: 1556883245}
 --- !u!114 &476531300751975588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2413,24 +2507,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &7627036909765883685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 476531300751975585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NetworkManager: {fileID: 1556883245}
-  NetworkAddress: localhost
-  NetworkAddressInput: {fileID: 476531298768979160}
-  OfflineGO: {fileID: 476531299574466371}
-  OnlineGO: {fileID: 476531299438667480}
-  StatusLabel: {fileID: 476531299335321996}
 --- !u!114 &9105488992691623440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2453,3 +2529,4 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0

@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace Mirage.Discovery
@@ -8,7 +7,6 @@ namespace Mirage.Discovery
     [DisallowMultipleComponent]
     [AddComponentMenu("Network/NetworkDiscoveryHud")]
     [HelpURL("https://mirror-networking.com/docs/Components/NetworkDiscovery.html")]
-    [RequireComponent(typeof(NetworkDiscovery))]
     public class NetworkDiscoveryHud : MonoBehaviour
     {
         readonly Dictionary<long, ServerResponse> discoveredServers = new Dictionary<long, ServerResponse>();
@@ -24,7 +22,7 @@ namespace Mirage.Discovery
             UnityEditor.Undo.RecordObjects(new Object[] { this, networkDiscovery }, "Set NetworkDiscovery");
             if (networkDiscovery == null)
             {
-                networkDiscovery = GetComponent<NetworkDiscovery>();
+                networkDiscovery = FindObjectOfType<NetworkDiscovery>();
                 UnityEditor.Events.UnityEventTools.AddPersistentListener(networkDiscovery.OnServerFound, OnDiscoveredServer);
             }
 
@@ -58,7 +56,7 @@ namespace Mirage.Discovery
             if (GUILayout.Button("Start Host"))
             {
                 discoveredServers.Clear();
-                networkManager.Server.StartHost(networkManager.Client).Forget();
+                networkManager.Server.StartServer(networkManager.Client);
                 networkDiscovery.AdvertiseServer();
             }
 
@@ -66,7 +64,7 @@ namespace Mirage.Discovery
             if (GUILayout.Button("Start Server"))
             {
                 discoveredServers.Clear();
-                networkManager.Server.ListenAsync().Forget();
+                networkManager.Server.StartServer();
 
                 networkDiscovery.AdvertiseServer();
             }
@@ -89,7 +87,7 @@ namespace Mirage.Discovery
 
         void Connect(ServerResponse info)
         {
-            networkManager.Client.ConnectAsync(info.uri.First()).Forget();
+            networkManager.Client.Connect(info.uri.First());
         }
 
         public void OnDiscoveredServer(ServerResponse info)

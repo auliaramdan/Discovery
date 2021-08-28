@@ -3,6 +3,8 @@ using System.Linq;
 using System.Net;
 using UnityEngine;
 using UnityEngine.Events;
+using Mirage.SocketLayer;
+using Mirage.Logging;
 
 namespace Mirage.Discovery
 {
@@ -20,7 +22,7 @@ namespace Mirage.Discovery
         public long ServerId { get; private set; }
 
         [Tooltip("Transport to be advertised during discovery")]
-        public Transport transport;
+        public SocketFactory transport;
 
         [Tooltip("Invoked when a server is found")]
         public ServerFoundUnityEvent OnServerFound;
@@ -56,7 +58,7 @@ namespace Mirage.Discovery
                 return new ServerResponse
                 {
                     serverId = ServerId,
-                    uri = transport.ServerUri().ToArray()
+                    uri = new[] { transport.GetBindEndPoint().ToString() }
                 };
             }
             catch (NotImplementedException)
@@ -98,11 +100,7 @@ namespace Mirage.Discovery
             // However we know the real ip address of the server because we just
             // received a packet from it,  so use that as host.
 
-            response.uri = response.uri.Select(uri =>
-                new UriBuilder(uri)
-                {
-                    Host = response.EndPoint.Address.ToString()
-                }.Uri).ToArray();
+            response.uri = new[] {response.EndPoint.Address.ToString()};
 
 
             OnServerFound.Invoke(response);
