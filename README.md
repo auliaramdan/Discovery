@@ -25,7 +25,7 @@ If you are using unity 2020.2 or later:
 5) enter https://github.com/MirageNet/Discovery.git?path=/Assets/Discovery
 6) Unity will download and install Mirage Discovery
 
-Alternatively you can download it from [Download Mirage](https://github.com/MirageNet/Discovery/releases).  You will need to install some dependencies yourself such as cecil.
+Alternatively you can download it from [Releases](https://github.com/MirageNet/Discovery/releases).  You will need to install some dependencies yourself such as cecil.
 
 ## Usage
 
