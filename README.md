@@ -1,6 +1,6 @@
 <p align="center"><img src="https://i.imgur.com/KbXfvaN.png"></p>
 
-[![Discord](https://img.shields.io/discord/809535064551456888.svg)]()
+[![Discord](https://img.shields.io/discord/809535064551456888.svg)](https://discord.gg/DTBPBYvexy)
 [![release](https://img.shields.io/github/release/MirageNet/Discovery.svg)](https://github.com/MirageNet/Discovery/releases/latest)
 [![Build](https://github.com/MirageNet/Discovery/workflows/CI/badge.svg)](https://github.com/MirageNet/Discovery/actions?query=workflow%3ACI)
 
