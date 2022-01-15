@@ -1,4 +1,4 @@
-![Mirror Logo](https://i.imgur.com/ikP9eYs.png)
+![Mirage Logo](https://i.imgur.com/ikP9eYs.png)
 
 [![Discord](https://img.shields.io/discord/343440455738064897.svg)]()
 [![release](https://img.shields.io/github/release/MirageNet/Discovery.svg)](https://github.com/MirageNet/Discovery/releases/latest)
