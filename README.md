@@ -2,13 +2,13 @@
 
 [![Discord](https://img.shields.io/discord/343440455738064897.svg)]()
 [![release](https://img.shields.io/github/release/MirageNet/Discovery.svg)](https://github.com/MirageNet/Discovery/releases/latest)
-
 [![Build](https://github.com/MirageNet/Discovery/workflows/CI/badge.svg)](https://github.com/MirageNet/Discovery/actions?query=workflow%3ACI)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=MirrorNG_Discovery&metric=alert_status)](https://sonarcloud.io/dashboard?id=MirrorNG_Discovery)
+
+<!--[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=MirrorNG_Discovery&metric=alert_status)](https://sonarcloud.io/dashboard?id=MirrorNG_Discovery)
 [![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=MirrorNG_Discovery&metric=coverage)](https://sonarcloud.io/component_measures?id=MirrorNG_Discovery&metric=coverage)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=MirrorNG_Discovery&metric=ncloc)](https://sonarcloud.io/dashboard?id=MirrorNG_Discovery)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=MirrorNG_Discovery&metric=sqale_index)](https://sonarcloud.io/dashboard?id=MirrorNG_Discovery)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=MirrorNG_Discovery&metric=code_smells)](https://sonarcloud.io/dashboard?id=MirrorNG_Discovery)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=MirrorNG_Discovery&metric=code_smells)](https://sonarcloud.io/dashboard?id=MirrorNG_Discovery)-->
 
 
 Mirage Discovery is a plugin for Mirage to for games to automatically find each other within the same network
