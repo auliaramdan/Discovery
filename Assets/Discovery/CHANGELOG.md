@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/MirageNet/Discovery/compare/v2.0.3...v2.0.4) (2022-02-20)
+
+
+### Bug Fixes
+
+* Network discovery blocked on Android-based devices ([711e921](https://github.com/MirageNet/Discovery/commit/711e92180503332f553c7d78179a256a5fc7286a))
+
 ## [2.0.3](https://github.com/MirageNet/Discovery/compare/v2.0.2...v2.0.3) (2021-08-28)
 
 
