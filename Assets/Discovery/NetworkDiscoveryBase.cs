@@ -12,6 +12,11 @@ using Mirage.Serialization;
 // forked from https://github.com/in0finite/MirrorNetworkDiscovery
 // Both are MIT Licensed
 
+// Updated 2022-02-20 by Coburn (SoftwareGuy)
+// This update has changes integrated from the Mirror PR #2887
+// PR author: Clancey; 22 Aug 2021
+// Source: https://github.com/vis2k/Mirror/pull/2887/
+
 namespace Mirage.Discovery
 {
     /// <summary>
@@ -81,6 +86,12 @@ namespace Mirage.Discovery
 
         void Shutdown()
         {
+#if UNITY_ANDROID
+            // If we're on Android, then tell the Android OS that
+            // we're done with multicasting and it may save battery again.
+            EndMulticastLock();
+#endif
+
             if (serverUdpClient != null)
             {
                 try
@@ -89,7 +100,7 @@ namespace Mirage.Discovery
                 }
                 catch (Exception)
                 {
-                    // it is just close, swallow the error
+                    // If it's already closed, then just swallow the error. There's no need to show it.
                 }
 
                 serverUdpClient = null;
@@ -103,7 +114,7 @@ namespace Mirage.Discovery
                 }
                 catch (Exception)
                 {
-                    // it is just close, swallow the error
+                    // Again, if it's already closed, then just swallow the error.
                 }
 
                 clientUdpClient = null;
@@ -137,6 +148,11 @@ namespace Mirage.Discovery
 
         public async UniTask ServerListenAsync()
         {
+#if UNITY_ANDROID
+            // Tell Android to allow us to use Multicasting.
+            BeginMulticastLock();
+
+#endif
             while (true)
             {
                 try
@@ -145,12 +161,12 @@ namespace Mirage.Discovery
                 }
                 catch (ObjectDisposedException)
                 {
-                    // socket has been closed
+                    // This socket's been disposed, that's okay, we'll handle it
                     break;
                 }
                 catch (Exception)
                 {
-                    // if we get an invalid request,  just ignore it
+                    // Invalid request or something else. Just ignore it.
                 }
             }
         }
@@ -224,9 +240,47 @@ namespace Mirage.Discovery
         /// <returns>The message to be sent back to the client or null</returns>
         protected abstract Response ProcessRequest(Request request, IPEndPoint endpoint);
 
-        #endregion
+#endregion
 
-        #region Client
+#region Android specific functions for Multicasting support
+
+#if UNITY_ANDROID
+        AndroidJavaObject multicastLock;
+        bool hasMulticastLock;
+
+        void BeginMulticastLock() {
+            if (hasMulticastLock)
+                return;
+
+            if (Application.platform == RuntimePlatform.Android)
+            {
+                using (AndroidJavaObject activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity"))
+                {
+                    using (AndroidJavaObject wifiManager = activity.Call<AndroidJavaObject>("getSystemService", "wifi"))
+                    {
+                        multicastLock = wifiManager.Call<AndroidJavaObject>("createMulticastLock", "lock");
+                        multicastLock.Call("acquire");
+                        hasMulticastLock = true;
+                    }
+                }
+			}
+        }
+
+        void EndMulticastLock()
+        {
+            // Don't have a multicast lock? Short-circuit.
+            if (!hasMulticastLock)
+                return;
+
+            // Release the lock.
+            multicastLock?.Call("release");
+            hasMulticastLock = false;
+        }
+#endif
+
+#endregion
+
+#region Client
 
         /// <summary>
         /// Start Active Discovery
@@ -359,6 +413,6 @@ namespace Mirage.Discovery
         /// <param name="endpoint">Address of the server that replied</param>
         protected abstract void ProcessResponse(Response response, IPEndPoint endpoint);
 
-        #endregion
+#endregion
     }
 }
